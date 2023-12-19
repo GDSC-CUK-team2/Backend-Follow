@@ -68,7 +68,13 @@ public enum BaseResponseStatus {
     //매칭 요청시 이미 친구 일때
     ALREADY_FRIEND_REQUEST(false, HttpStatus.NOT_FOUND.value(), "이미 매칭된 친구입니다."),
     //매칭 요청시 이미 상대에게서 온 요청이 있을때
-    ALREADY_RECEIVED_REQUEST(false, HttpStatus.NOT_FOUND.value(), "이미 상대로부터 받은 요청이 있습니다.");
+    ALREADY_RECEIVED_REQUEST(false, HttpStatus.NOT_FOUND.value(), "이미 상대로부터 받은 요청이 있습니다."),
+    //찾으려는 shop 없을때
+    SHOP_NOT_FOUND(false, HttpStatus.NOT_FOUND.value(), "음식점을 찾을 수 없습니다."),
+    //검색어를 입력하지 않았을때
+    KEYWORD_NULL(false, HttpStatus.NOT_FOUND.value(), "검색어를 입력하세요."),
+    //검색 실패
+    SEARCH_FAIL(false, HttpStatus.NOT_FOUND.value(), "검색 실패.");
 
     private final boolean isSuccess;
     private final int code;
